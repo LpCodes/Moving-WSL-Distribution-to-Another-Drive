@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moving WSL Distribution to Another Drive</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #343a40;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #343a40;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+
+    p {
+      color: #6c757d;
+      line-height: 1.6;
+    }
+
+    ul {
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+
+    pre {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    }
+
+    .alert {
+      padding: 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .alert-info {
+      color: #0c5460;
+      background-color: #d1ecf1;
+      border-color: #bee5eb;
+    }
+
+    .alert-success {
+      color: #155724;
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+    }
+
+    .fa {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Moving WSL Distribution to Another Drive</h1>
+
+    <div class="alert alert-info" role="alert">
+      <i class="fas fa-info-circle"></i> This guide explains the process of moving a Linux distribution installed on Windows Subsystem for Linux (WSL) to another drive. In this example, we will be moving an Ubuntu 22.04 distribution, and the steps are outlined below.
+    </div>
+
+    <h2>Prerequisites</h2>
+    <ul>
+      <li>Windows operating system with WSL 2 installed.</li>
+    </ul>
+
+    <h2>Instructions</h2>
+
+    <ol>
+      <li>
+        <p>Check the existing WSL 2 installations on your computer by running the following command in a WSL or Command Prompt window:</p>
+
+        <pre><code>wsl --list -v</code></pre>
+
+        <p>If the installation you want to move is currently running, you need to stop it. For example, if you want to move Ubuntu 22.04, terminate it using the following command:</p>
+
+        <pre><code>wsl -t Ubuntu-22.04</code></pre>
+      </li>
+
+      <li>
+        <p>Export the WSL distribution to a folder. In this example, we will export Ubuntu 22.04 as <code>ubuntu-ex.tar</code> to the <code>D:\wsl\wsl_export</code> directory. Run the following command:</p>
+
+        <pre><code>wsl --export Ubuntu-22.04 "D:\wsl_export\ubuntu-ex.tar"</code></pre>
+      </li>
+
+      <li>
+        <p>Unregister the previous WSL installation. This step removes the Ubuntu 22.04 distribution from the WSL 2 list obtained in the previous step. Execute the following command:</p>
+
+        <pre><code>wsl --unregister Ubuntu-22.04</code></pre>
+      </li>
+
+      <li>
+        <p>Import the WSL installation to a new folder and re-register it. In this example, we will import Ubuntu 22.04 to the <code>D:\wsl_import\ubuntu</code> directory using the exported <code>ubuntu-ex.tar</code> file. Run the following command:</p>
+
+        <pre><code>wsl --import Ubuntu-22.04 "D:\wsl_import\ubuntu" "D:\wsl_export\ubuntu-ex.tar"</code></pre>
+      </li>
+    </ol>
+
+    <div class="alert alert-success mt-4" role="alert">
+      <i class="fas fa-check-circle"></i> Congratulations! You have successfully moved your WSL distribution (Ubuntu 22.04) to another drive. You can now start the distribution and continue using it on the new location.
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
