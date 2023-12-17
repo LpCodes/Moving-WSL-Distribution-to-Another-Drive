@@ -38,4 +38,11 @@ This guide explains the process of moving a Linux distribution installed on Wind
    wsl --import Ubuntu-22.04 "D:\wsl_import\ubuntu" "D:\wsl_export\ubuntu-ex.tar"
    ```
 
+5. Set default user (optional): This step is only necessary if you're:
+   Importing to a new machine or creating a new user for Ubuntu. Setting the default user avoids login prompts each time you launch the distribution.
+
+   Using multiple users on your Windows machine and want different defaults for each. This clarifies which user launches by default for each WSL environment.
+
+   To set the default user, run: `ubuntu.exe config --default-user me` (replace "me" with your actual username).
+
 Congratulations! You have successfully moved your WSL distribution (Ubuntu 22.04) to another drive. You can now start the distribution and continue using it on the new location.
