@@ -45,6 +45,11 @@ This guide explains the process of moving a Linux distribution installed on Wind
 
    To set the default user, run: `ubuntu.exe config --default-user me` (replace "me" with your actual username).
 
+6. Set default distribution (optional): This step in necessary only if you have multiple distributions registered in WSL and you want use the imported one as default.
+
+   To set the default distribution, run `wsl --setdefault <distribution_name>`, e.g. `wsl --setdefault Ubuntu-22.04`
+   
+
 Congratulations! You have successfully moved your WSL distribution (Ubuntu 22.04) to another drive. You can now start the distribution and continue using it on the new location.
 
 Don't hesitate to create pull requests if you have suggestions for improvements to this guide. Your contributions are greatly appreciated!
