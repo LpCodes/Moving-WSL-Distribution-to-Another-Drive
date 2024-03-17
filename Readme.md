@@ -43,7 +43,15 @@ This guide explains the process of moving a Linux distribution installed on Wind
 
    Using multiple users on your Windows machine and want different defaults for each. This clarifies which user launches by default for each WSL environment.
 
-   To set the default user, run: `ubuntu.exe config --default-user me` (replace "me" with your actual username).
+   To set the default user, run: `<distro>.exe config --default-user me` (replace "me" with your actual username).
+
+   For instance, if you installed "Ubuntu 22.04" from the Store, you would use:
+   ```
+   ubuntu2204.exe config --default-user me
+   ```
+   
+   The .exe here is an "App Execution Alias" in Windows. You can check the name by going to "Manage app execution aliases" in the Windows System Settings.
+
 
 6. Set default distribution (optional): This step in necessary only if you have multiple distributions registered in WSL and you want use the imported one as default.
 
