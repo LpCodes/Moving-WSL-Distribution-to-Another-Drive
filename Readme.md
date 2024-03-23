@@ -45,7 +45,7 @@ This guide explains the process of moving a Linux distribution installed on Wind
 
    To set the default user, run: `ubuntu.exe config --default-user me` (replace "me" with your actual username).
 
-6. Set default distribution (optional): This step in necessary only if you have multiple distributions registered in WSL and you want use the imported one as default.
+6. Set default distribution (optional): This step in necessary only if you have multiple distributions registered in WSL and you want to use the imported one as default.
 
    To set the default distribution, run `wsl --setdefault <distribution_name>`, e.g. `wsl --setdefault Ubuntu-22.04`
    
