@@ -53,7 +53,7 @@ This guide explains the process of moving a Linux distribution installed on Wind
    The .exe here is an "App Execution Alias" in Windows. You can check the name by going to "Manage app execution aliases" in the Windows System Settings.
 
 
-6. Set default distribution (optional): This step in necessary only if you have multiple distributions registered in WSL and you want use the imported one as default.
+6. Set default distribution (optional): This step in necessary only if you have multiple distributions registered in WSL and you want to use the imported one as default.
 
    To set the default distribution, run `wsl --setdefault <distribution_name>`, e.g. `wsl --setdefault Ubuntu-22.04`
    
