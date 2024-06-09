@@ -20,7 +20,7 @@ This guide explains the process of moving a Linux distribution installed on Wind
    wsl -t Ubuntu-22.04
    ```
 
-2. Export the WSL distribution to a folder. In this example, we will export Ubuntu 22.04 as `ubuntu-ex.tar` to the `D:\wsl\wsl_export` directory. Run the following command:
+2. Export the WSL distribution to a folder. In this example, we will export Ubuntu 22.04 as `ubuntu-ex.tar` to the `D:\wsl_export` directory. Run the following command:
 
    ```
    wsl --export Ubuntu-22.04 "D:\wsl_export\ubuntu-ex.tar"
