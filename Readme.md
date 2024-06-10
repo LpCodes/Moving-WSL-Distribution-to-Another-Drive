@@ -32,10 +32,10 @@ This guide explains the process of moving a Linux distribution installed on Wind
    wsl --unregister Ubuntu-22.04
    ```
 
-4. Import the WSL installation to a new folder and re-register it. In this example, we will import Ubuntu 22.04 to the `D:\wsl_import\ubuntu` directory using the exported `ubuntu-ex.tar` file. Run the following command:
+4. Import the WSL installation to a new folder and re-register it. In this example, we will import Ubuntu 22.04 to the `D:\wsl_import\ubuntu` directory using the exported `ubuntu-ex.tar` file. Specify whether to import the distribution as WSL 1 or WSL 2 `--version <1/2>`. Run the following command:
 
    ```
-   wsl --import Ubuntu-22.04 "D:\wsl_import\ubuntu" "D:\wsl_export\ubuntu-ex.tar"
+   wsl --import Ubuntu-22.04 "D:\wsl_import\ubuntu" "D:\wsl_export\ubuntu-ex.tar --version 2"
    ```
 
 5. Set default user (optional): This step is only necessary if you're:
