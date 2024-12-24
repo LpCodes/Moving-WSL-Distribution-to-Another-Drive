@@ -35,10 +35,6 @@
    wsl --unregister Ubuntu-22.04
    ```
 
-Here is an expanded and clearer explanation for the "Import the WSL installation to a new location" section:
-
----
-
 ### 4. **Import the WSL Installation to a New Location**
 
 To move the exported WSL distribution to a new folder, you need to import the `.tar` file created in the previous step. When you import a distribution, it can be set to either WSL version 1 or version 2. By default, if no version is specified, it may import as version 1. To explicitly ensure that it is imported as WSL version 2, you should use the `--version` flag.
